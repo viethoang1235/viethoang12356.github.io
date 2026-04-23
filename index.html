@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự Án Web Game FPS</title>
+    <style>
+        /* CSS để trang trí giao diện nhìn "ngầu" hơn một chút */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Màu nền tối */
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Chiếm trọn chiều cao màn hình */
+        }
+
+        h1 {
+            color: #ff4655; /* Màu đỏ mượn cảm hứng từ Valorant */
+        }
+
+        /* Đây là khung game của bạn */
+        #gameCanvas {
+            background-color: #000000;
+            border: 3px solid #333;
+            box-shadow: 0 0 15px rgba(255, 70, 85, 0.5); /* Hiệu ứng sáng viền */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nguyên Mẫu Game Bắn Súng</h1>
+    
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <p>Sử dụng WASD để di chuyển (Chưa có code, nhưng chuẩn bị sẵn tinh thần!)</p>
+
+    <script>
+        // Phần Javascript: Nơi bạn sẽ viết logic game, vật lý, đồ họa
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d'); // Dùng 2D cho dễ bắt đầu nhé
+
+        // In ra console để biết code đã chạy
+        console.log("Khung HTML đã sẵn sàng. Chờ code game!");
+        
+        // Ví dụ vẽ thử một "người chơi" (hình vuông màu xanh) ra giữa màn hình
+        ctx.fillStyle = "#00ffcc";
+        ctx.fillRect(380, 280, 40, 40); 
+    </script>
+
+</body>
+</html>
